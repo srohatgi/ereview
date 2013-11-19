@@ -1,0 +1,51 @@
+
+/* Define default spinner */
+.ui-icon-loading {
+	background: url("files/resources/lib/jquerymobile/1.3.2/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
+}
+/* mobilecontainer */
+.ui-content.ServiceReview_mobilecontainer {
+	padding: 15px 15px 15px 15px;
+	height: 100%;
+}
+/* mobilelabel_1 */
+.ServiceReview_mobilelabel_1 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+}
+/* mobilelabel_15 */
+.ServiceReview_mobilelabel_15 {
+	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+}
+/* mobileimage_16 */
+.ServiceReview_mobileimage_16 {
+	margin: 4px 0px 4px 0px;
+	width: 288px; height: 100px;
+	display: block;
+}
+/* mobilelist_17 */
+.ui-content .ServiceReview_mobilelist_17 {
+	margin: 4px 0px 0px 0px;
+}
+/* mobilelistitem_18 */
+/* mobilelistitembutton_19 */
+.ServiceReview_mobilelistitembutton_19 {
+
+}
+/* mobilelistitem_20 */
+/* mobilelistitembutton_21 */
+.ServiceReview_mobilelistitembutton_21 {
+
+}
+/* mobilelistitem_22 */
+/* mobilelistitembutton_23 */
+.ServiceReview_mobilelistitembutton_23 {
+
+}
+/* mobilefooter */
+.ServiceReview_mobilefooter {
+	min-height:38px;
+}

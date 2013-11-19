@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            ServiceReview
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.3.2/jquery.mobile.structure-1.3.2.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.toLowerCase().indexOf("android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+                if (navigator.userAgent.toLowerCase().indexOf("msie") != -1)
+                {
+                    $.mobile.allowCrossDomainPages = true;
+                    $.support.cors = true;
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.3.2/jquery.mobile-1.3.2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/js/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/appery.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/get_target_platform.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/cordova.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Salesforce_utils.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/CustomURLAjax.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/CustomAjaxSFLogin.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/services/service.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="ServiceReview" id="ServiceReview"
+        class="type-interior" data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader"
+            id="ServiceReview_mobileheader" class=' ServiceReview_mobileheader '>
+                <h1 dsid="mobileheader">
+                    Reviews
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="ServiceReview_mobilecontainer" name="mobilecontainer"
+            class=" ServiceReview_mobilecontainer" dsid="mobilecontainer" data-theme="">
+                <link href="ServiceReview.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="ServiceReview.js">
+                </script>
+                <!-- mobilelabel_1 -->
+                <div name="mobilelabel_1" id="ServiceReview_mobilelabel_1" dsid="mobilelabel_1"
+                data-role="appery_label" class=' ServiceReview_mobilelabel_1 '>
+                    service or product name
+                </div>
+                <!-- mobilelabel_15 -->
+                <div name="mobilelabel_15" id="ServiceReview_mobilelabel_15" dsid="mobilelabel_15"
+                data-role="appery_label" class=' ServiceReview_mobilelabel_15 '>
+                    Average rating
+                </div>
+                <!-- mobileimage_16 -->
+                <img class=" ServiceReview_mobileimage_16" src="files/resources/image/no-image.jpg"
+                id="ServiceReview_mobileimage_16" dsid="mobileimage_16" name="mobileimage_16" />
+                <!-- mobilelist_17 -->
+                <ul data-role="listview" id="ServiceReview_mobilelist_17" class=' ServiceReview_mobilelist_17 '
+                name="mobilelist_17" dsid="mobilelist_17" data-inset="true" data-theme="d" data-divider-theme="a"
+                data-count-theme="c" style="">
+                    <!-- mobilelistitem_18 -->
+                    <li class=' ServiceReview_mobilelistitem_18 '>
+                        <a id="ServiceReview_mobilelistitem_18" name="mobilelistitem_18" dsid="mobilelistitem_18"
+                        tabindex="3" class=' ServiceReview_mobilelistitem_18 '>
+                        <h3>review 1</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_20 -->
+                    <li class=' ServiceReview_mobilelistitem_20 '>
+                        <a id="ServiceReview_mobilelistitem_20" name="mobilelistitem_20" dsid="mobilelistitem_20"
+                        tabindex="3" class=' ServiceReview_mobilelistitem_20 '>
+                        <h3>review 2</h3>
+                        </a>
+                    </li>
+                    <!-- mobilelistitem_22 -->
+                    <li class=' ServiceReview_mobilelistitem_22 '>
+                        <a id="ServiceReview_mobilelistitem_22" name="mobilelistitem_22" dsid="mobilelistitem_22"
+                        tabindex="3" class=' ServiceReview_mobilelistitem_22 '>
+                        <h3>review 3</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- mobilefooter -->
+            <div data-role="footer" data-position="fixed" class=" ServiceReview_mobilefooter"
+            name="mobilefooter" dsid="mobilefooter" id="ServiceReview_mobilefooter" data-theme="b">
+            </div>
+        </div>
+    </body>
+
+</html>
