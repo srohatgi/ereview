@@ -34,13 +34,9 @@ Appery.AppPages = [{
 startScreen_js = function(runBeforeShow) { /* Object & array with components "name-to-id" mapping */
     var n2id_buf = {
         'mobilesearchbar_74': 'startScreen_mobilesearchbar_74',
-        'mobilelist_85': 'startScreen_mobilelist_85',
-        'mobilelistitem_86': 'startScreen_mobilelistitem_86',
-        'mobilelistitembutton_87': 'startScreen_mobilelistitembutton_87',
-        'mobilelistitem_88': 'startScreen_mobilelistitem_88',
-        'mobilelistitembutton_89': 'startScreen_mobilelistitembutton_89',
-        'mobilelistitem_90': 'startScreen_mobilelistitem_90',
-        'mobilelistitembutton_91': 'startScreen_mobilelistitembutton_91'
+        'mobilelist_92': 'startScreen_mobilelist_92',
+        'ProductList': 'startScreen_ProductList',
+        'mobilelistitembutton_94': 'startScreen_mobilelistitembutton_94'
     };
 
     if ("n2id" in window && window.n2id !== undefined) {
@@ -71,50 +67,77 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
      */
     var datasources = [];
 
-    restservice1 = new Appery.DataSource(Salesforce_Account_query_service, {
+    restloginRESTService = new Appery.DataSource(loginRESTService, {
         'onComplete': function(jqXHR, textStatus) {
 
             $t.refreshScreenFormElements("startScreen");
         },
         'onSuccess': function(data) {
             try {
-                restservice1.execute({})
+                restloginRESTService.execute({})
             } catch (ex) {
                 console.log(ex.name + '  ' + ex.message);
                 hideSpinner();
             };
         },
         'onError': function(jqXHR, textStatus, errorThrown) {},
-        'responseMapping': [],
-        'requestMapping': [{
-            'PATH': ['Authorization'],
-            'TYPE': 'STRING',
-            'HEADER': true,
-            'ATTR': '{salesforce_access_token}'
+        'responseMapping': [{
+            'PATH': ['instance_url'],
+            'ID': '___local_storage___',
+            'ATTR': 'Instance_url'
         }, {
-            'PATH': ['q'],
+            'PATH': ['access_token'],
+            'ID': '___local_storage___',
+            'ATTR': 'access_token'
+        }],
+        'requestMapping': []
+    });
+
+    datasources.push(restloginRESTService);
+
+    restsearchRESTservice1 = new Appery.DataSource(searchRESTService, {
+        'onComplete': function(jqXHR, textStatus) {
+
+            $t.refreshScreenFormElements("startScreen");
+        },
+        'onSuccess': function(data) {
+            try {
+                restsearchRESTservice1.execute({})
+            } catch (ex) {
+                console.log(ex.name + '  ' + ex.message);
+                hideSpinner();
+            };
+        },
+        'onError': function(jqXHR, textStatus, errorThrown) {},
+        'responseMapping': [{
+            'PATH': ['records'],
+            'ID': 'ProductList',
+            'SET': [{
+                'PATH': ['Name'],
+                'ID': 'ProductList',
+                'ATTR': '@',
+                'SUBSELECTOR': 'h3.ui-li-heading'
+            }]
+        }],
+        'requestMapping': [{
+            'PATH': ['server'],
+            'TYPE': 'STRING',
+            'ID': '___local_storage___',
+            'ATTR': 'Instance_url'
+        }, {
+            'PATH': ['token'],
+            'TYPE': 'STRING',
+            'ID': '___local_storage___',
+            'ATTR': 'access_token'
+        }, {
+            'PATH': ['search_query'],
             'TYPE': 'STRING',
             'ID': 'mobilesearchbar_74',
-            'ATTR': 'value',
-            'TRANSFORMATION': function(value) {
-                return "Select Name from Account where Name like '%" + value + "%'";
-            }
-        }, {
-            'PATH': ['appery-proxy-url'],
-            'HEADER': true,
-            'ATTR': '{salesforce_instance_url}/services/data/{salesforce_api_version}/query'
-        }, {
-            'PATH': ['appery-key'],
-            'HEADER': true,
-            'ATTR': '1384909434335'
-        }, {
-            'PATH': ['appery-rest'],
-            'HEADER': true,
-            'ATTR': '2780442'
+            'ATTR': 'value'
         }]
     });
 
-    datasources.push(restservice1);
+    datasources.push(restsearchRESTservice1);
 
     /*
      * Events and handlers
@@ -131,6 +154,12 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
     // On Load
     screen_3671_onLoad = startScreen_onLoad = function() {
         screen_3671_elementsExtraJS();
+        try {
+            restloginRESTService.execute({})
+        } catch (ex) {
+            console.log(ex.name + '  ' + ex.message);
+            hideSpinner();
+        };
 
         // TODO fire device events only if necessary (with JS logic)
         startScreen_deviceEvents();
@@ -159,23 +188,19 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
     screen_3671_elementsExtraJS = startScreen_elementsExtraJS = function() {
         // screen (startScreen) extra code
 
-        /* mobilelist_85 */
+        /* mobilelist_92 */
 
-        listView = $("#startScreen_mobilelist_85");
+        listView = $("#startScreen_mobilelist_92");
         theme = listView.attr("data-theme");
         if (typeof theme !== 'undefined') {
             var themeClass = "ui-btn-up-" + theme;
-            listItem = $("#startScreen_mobilelist_85 .ui-li-static");
+            listItem = $("#startScreen_mobilelist_92 .ui-li-static");
             $.each(listItem, function(index, value) {
                 $(this).addClass(themeClass);
             });
         }
 
-        /* mobilelistitem_86 */
-
-        /* mobilelistitem_88 */
-
-        /* mobilelistitem_90 */
+        /* ProductList */
 
     }
 
@@ -191,26 +216,29 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
         $('#startScreen_mobilecontainer1 [name="mobilesearchbar_74"]').die().live({
             keypress: function() {
                 try {
-                    restservice1.execute({})
+                    restsearchRESTservice1.execute({})
                 } catch (ex) {
                     console.log(ex.name + '  ' + ex.message);
                     hideSpinner();
                 };
             },
-            swipe: function() {
-                try {
-                    restservice1.execute({})
-                } catch (ex) {
-                    console.log(ex.name + '  ' + ex.message);
-                    hideSpinner();
-                };
+            click: function() {
+                if (!$(this).attr('disabled')) {
+                    try {
+                        restsearchRESTservice1.execute({})
+                    } catch (ex) {
+                        console.log(ex.name + '  ' + ex.message);
+                        hideSpinner();
+                    };
+
+                }
             },
         });
         $('#startScreen_mobilesearchbar_74-cover-img').live({
             vclick: function() {
                 if (!$(this).attr('disabled')) {
                     try {
-                        restservice1.execute({})
+                        restsearchRESTservice1.execute({})
                     } catch (ex) {
                         console.log(ex.name + '  ' + ex.message);
                         hideSpinner();
@@ -219,7 +247,7 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
             }
         });
 
-        $('#startScreen_mobilecontainer1 [name="mobilelist_85"]').die().live({
+        $('#startScreen_mobilecontainer1 [name="ProductList"]').die().live({
             click: function() {
                 if (!$(this).attr('disabled')) {
                     Appery.navigateTo('ServiceReview', {

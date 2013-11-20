@@ -507,6 +507,12 @@ var Salesforce_Case_query_service = new Appery.RestService({
     'serviceSettings': Salesforce_settings
 });
 
+var searchRESTService = new Appery.RestService({
+    'url': 'http://54.193.5.43:3000/search',
+    'dataType': 'json',
+    'type': 'get',
+});
+
 var Salesforce_Contact_delete_service = new Appery.RestService({
     'url': 'https://appery.io/app/rest/tunnel',
     'dataType': 'json',
@@ -557,8 +563,8 @@ var Salesforce_ContentDocumentLink_create_service = new Appery.RestService({
     'serviceSettings': Salesforce_settings
 });
 
-var RESTService = new Appery.RestService({
-    'url': '',
+var loginRESTService = new Appery.RestService({
+    'url': 'http://54.193.5.43:3000/login',
     'dataType': 'json',
     'type': 'get',
 });
