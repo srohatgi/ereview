@@ -1,16 +1,18 @@
 Howl: Enterprise Reviews
 ========================
 
-Howl fills a vacuum in the enterprise product and sales marketplace. Similar to Amazon's customer reviews, Howl provides a way for enterprises and their customers to have an open dialog. This helps make the enterprise product and services market more competitive and grow at a much faster pace than now.
+Howl fills a vacuum in the enterprise product marketplace. Similar to Amazon's product reviews, Howl provides a way for enterprise customers to voice, record and share their opinion. This makes the market competitive, transparent and accessible.
 
-Salesforce's rich CRM and Support databases provide a unique and rare opportunity to build Howl (enterprise reviews) and become a *ubiquitous influence on enterprise market* as Amazon has over the retail product market or Yelp has over casual dining.
+Today's typical enterprise service buying scenario: an IT architect is asked to provide recommendations on say, purchasing a CDN service. He formulates an early opinion either based on vendors' websites (biased) or painstakingly research blog posts (questionable credibility) or through expensive analyst materials (artificial and maybe biased). A thorough investigation is almost always impossible. This needs to change.
+
+Salesforce's rich CRM and Support databases provide a rare opportunity and permission to build Howl enterprise reviews and become a *ubiquitous influencer on enterprise market*, similar to say Amazon's influence over the retail product market or Yelp in casual dining market.
 
 Mobile Application
 ------------------
 
 Howl's user experience is to keep it simple: a search bar for searching across enterprise services and products and then a detail review page for the service/ product.
 
-The search is done using Salesforce SOQL API on the Product table. We created a custom object Product_Review table for storing reviews. We used appery.io to build the mobile application, and wrote REST/ JSON services using nodejs.
+The search is implemented using SOQL API. We created a custom object Product_Review table for storing reviews. Appery.io is used to build the mobile application, and custom REST/ JSON services are written  using nodejs.
 
 Future Enhancements
 -------------------
