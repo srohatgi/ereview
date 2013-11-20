@@ -3,16 +3,34 @@
 .ui-icon-loading {
 	background: url("files/resources/lib/jquerymobile/1.3.2/images/ajax-loader.gif") repeat scroll 0 0 / 46px 46px transparent!important;
 }
+/* mobilebutton_29 */
+#ServiceReview_mobilebutton_29 {
+
+}
+.ui-btn.ServiceReview_mobilebutton_29 {
+
+}
 /* mobilecontainer */
 .ui-content.ServiceReview_mobilecontainer {
-	padding: 15px 15px 15px 15px;
+	padding: 5px 5px 5px 5px;
 	height: 100%;
 }
-/* mobilelabel_1 */
-.ServiceReview_mobilelabel_1 {
-	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
+/* mobilelabel_63 */
+.ServiceReview_mobilelabel_63 {
+	text-decoration: none; font-weight: normal; font-style: italic; color: #a0afbd; text-align: left; font-family: Helvetica; font-size: 16px;
 	margin: 4px 0px 4px 0px;
 	word-wrap: break-word;
+}
+/* mobilelabel_ProductName */
+.ServiceReview_mobilelabel_ProductName {
+	text-decoration: none; font-weight: bold; text-align: left; font-family: Helvetica; font-size: 16px;
+	margin: 4px 0px 4px 0px;
+	word-wrap: break-word;
+}
+/* spacer_61 */
+.ServiceReview_spacer_61 {
+	width: 260px; height: 34px;
+	margin: 4px 0px 4px 0px;
 }
 /* mobilelabel_15 */
 .ServiceReview_mobilelabel_15 {
@@ -20,30 +38,34 @@
 	margin: 4px 0px 4px 0px;
 	word-wrap: break-word;
 }
-/* mobileimage_16 */
-.ServiceReview_mobileimage_16 {
-	margin: 4px 0px 4px 0px;
-	width: 148px; height: 120px;
-	display: block;
-}
-/* mobilelist_17 */
-.ui-content .ServiceReview_mobilelist_17 {
+/* mobilelist_53 */
+.ui-content .ServiceReview_mobilelist_53 {
 	margin: 4px 0px 0px 0px;
 }
-/* mobilelistitem_18 */
-/* mobilelistitembutton_19 */
-.ServiceReview_mobilelistitembutton_19 {
+/* mobilelistitem_54 */
+.ui-mobile-viewport ul[data-role="listview"] li.ServiceReview_mobilelistitem_54 {
+	padding: 0px 0px 0px 0px;
+	padding-right: 30px; /* consider extra icon */
+}
+.ui-mobile-viewport ul[data-role="listview"] li.ServiceReview_mobilelistitem_54 span.ui-icon.extra {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -9px;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.ServiceReview_mobilelistitem_54[data-icon="false"] span.ui-icon.extra {
+	display: none;
+}
+.ui-mobile-viewport ul[data-role="listview"] li.ServiceReview_mobilelistitem_54[data-icon="false"] {
+	padding-right: 0px; /* consider nothing */
+}
+/* mobilelistitembutton_55 */
+.ServiceReview_mobilelistitembutton_55 {
 
 }
-/* mobilelistitem_20 */
-/* mobilelistitembutton_21 */
-.ServiceReview_mobilelistitembutton_21 {
-
-}
-/* mobilelistitem_22 */
-/* mobilelistitembutton_23 */
-.ServiceReview_mobilelistitembutton_23 {
-
+/* mobiletextarea_60 */
+.ServiceReview_mobiletextarea_60 {
+	margin: 0px 0px 0px 0px;
 }
 /* mobilefooter */
 .ServiceReview_mobilefooter {

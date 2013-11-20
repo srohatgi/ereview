@@ -36,7 +36,8 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
         'mobilesearchbar_74': 'startScreen_mobilesearchbar_74',
         'mobilelist_92': 'startScreen_mobilelist_92',
         'ProductList': 'startScreen_ProductList',
-        'mobilelistitembutton_94': 'startScreen_mobilelistitembutton_94'
+        'mobilelistitembutton_94': 'startScreen_mobilelistitembutton_94',
+        'mobileimage_95': 'startScreen_mobileimage_95'
     };
 
     if ("n2id" in window && window.n2id !== undefined) {
@@ -72,14 +73,7 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
 
             $t.refreshScreenFormElements("startScreen");
         },
-        'onSuccess': function(data) {
-            try {
-                restloginRESTService.execute({})
-            } catch (ex) {
-                console.log(ex.name + '  ' + ex.message);
-                hideSpinner();
-            };
-        },
+        'onSuccess': function(data) {},
         'onError': function(jqXHR, textStatus, errorThrown) {},
         'responseMapping': [{
             'PATH': ['instance_url'],
@@ -100,14 +94,7 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
 
             $t.refreshScreenFormElements("startScreen");
         },
-        'onSuccess': function(data) {
-            try {
-                restsearchRESTservice1.execute({})
-            } catch (ex) {
-                console.log(ex.name + '  ' + ex.message);
-                hideSpinner();
-            };
-        },
+        'onSuccess': function(data) {},
         'onError': function(jqXHR, textStatus, errorThrown) {},
         'responseMapping': [{
             'PATH': ['records'],
@@ -117,6 +104,14 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
                 'ID': 'ProductList',
                 'ATTR': '@',
                 'SUBSELECTOR': 'h3.ui-li-heading'
+            }, {
+                'PATH': ['ProductCode'],
+                'ID': '___local_storage___',
+                'ATTR': 'productcode'
+            }, {
+                'PATH': ['Name'],
+                'ID': '___local_storage___',
+                'ATTR': 'productname'
             }]
         }],
         'requestMapping': [{

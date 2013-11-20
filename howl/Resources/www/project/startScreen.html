@@ -11,6 +11,7 @@
         <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
         />
         <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
         <link href="files/resources/lib/jquerymobile/1.3.2/jquery.mobile.structure-1.3.2.css"
         rel="stylesheet" />
         <script type="text/javascript" src="files/resources/lib/store/json2.js">
@@ -58,8 +59,6 @@
         />
         <script type="text/javascript" src="files/views/assets/js/Salesforce_utils.js">
         </script>
-        <script type="text/javascript" src="files/views/assets/js/CustomURLAjax.js">
-        </script>
         <script type="text/javascript" src="files/views/assets/js/CustomAjaxSFLogin.js">
         </script>
         <script type="text/javascript" src="files/views/assets/js/services/service.js">
@@ -77,9 +76,9 @@
         }
         </script>
         <div data-role="page" style="min-height:480px;" dsid="startScreen" id="startScreen"
-        class="type-interior" data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+        class="type-interior" data-theme="e" data-add-back-btn="false" data-back-btn-text="Back">
             <!-- mobileheader1 -->
-            <div data-role="header" data-position="fixed" data-theme="e" name="mobileheader1"
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader1"
             id="startScreen_mobileheader1" class=' startScreen_mobileheader1 '>
                 <h1 dsid="mobileheader1">
                     Howl
@@ -87,7 +86,7 @@
             </div>
             <!-- mobilecontainer1 -->
             <div data-role="content" id="startScreen_mobilecontainer1" name="mobilecontainer1"
-            class=" startScreen_mobilecontainer1" dsid="mobilecontainer1" data-theme="">
+            class=" startScreen_mobilecontainer1" dsid="mobilecontainer1" data-theme="b">
                 <link href="startScreen.css" rel="stylesheet" type="text/css" />
                 <script type="text/javascript" src="startScreen.js">
                 </script>
@@ -98,12 +97,12 @@
                         />
                     </div>
                     <input type="search" name="mobilesearchbar_74" id="startScreen_mobilesearchbar_74"
-                    dsid="mobilesearchbar_74" value="" data-theme="c" tabindex="8" class=' startScreen_mobilesearchbar_74 '
-                    />
+                    dsid="mobilesearchbar_74" value="" placeholder="product or service" data-theme="c"
+                    tabindex="8" class=' startScreen_mobilesearchbar_74 ' />
                 </div>
                 <!-- mobilelist_92 -->
                 <ul data-role="listview" id="startScreen_mobilelist_92" class=' startScreen_mobilelist_92 '
-                name="mobilelist_92" dsid="mobilelist_92" data-inset="true" data-theme="b" data-divider-theme="b"
+                name="mobilelist_92" dsid="mobilelist_92" data-inset="true" data-theme="c" data-divider-theme="b"
                 data-count-theme="b" style="">
                     <!-- ProductList -->
                     <li class=' startScreen_ProductList '>
@@ -113,10 +112,13 @@
                         </a>
                     </li>
                 </ul>
+                <!-- mobileimage_95 -->
+                <img class=" startScreen_mobileimage_95" src="files/views/assets/image/bgimage.png"
+                id="startScreen_mobileimage_95" dsid="mobileimage_95" name="mobileimage_95" />
             </div>
             <!-- mobilefooter1 -->
-            <div data-role="footer" data-position="fixed" class=" startScreen_mobilefooter1"
-            name="mobilefooter1" dsid="mobilefooter1" id="startScreen_mobilefooter1" data-theme="b">
+            <div data-role="footer" data-position="inline" class=" startScreen_mobilefooter1"
+            name="mobilefooter1" dsid="mobilefooter1" id="startScreen_mobilefooter1" data-theme="c">
             </div>
         </div>
     </body>

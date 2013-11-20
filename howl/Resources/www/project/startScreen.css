@@ -28,6 +28,12 @@
 .startScreen_mobilelistitembutton_94 {
 
 }
+/* mobileimage_95 */
+.startScreen_mobileimage_95 {
+	margin: 4px 0px 4px 0px;
+	width: 285px; height: 288px;
+	display: block;
+}
 /* mobilefooter1 */
 .startScreen_mobilefooter1 {
 	min-height:38px;

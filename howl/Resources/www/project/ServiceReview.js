@@ -33,16 +33,15 @@ Appery.AppPages = [{
 
 ServiceReview_js = function(runBeforeShow) { /* Object & array with components "name-to-id" mapping */
     var n2id_buf = {
-        'mobilelabel_1': 'ServiceReview_mobilelabel_1',
+        'mobilebutton_29': 'ServiceReview_mobilebutton_29',
+        'mobilelabel_63': 'ServiceReview_mobilelabel_63',
+        'mobilelabel_ProductName': 'ServiceReview_mobilelabel_ProductName',
+        'spacer_61': 'ServiceReview_spacer_61',
         'mobilelabel_15': 'ServiceReview_mobilelabel_15',
-        'mobileimage_16': 'ServiceReview_mobileimage_16',
-        'mobilelist_17': 'ServiceReview_mobilelist_17',
-        'mobilelistitem_18': 'ServiceReview_mobilelistitem_18',
-        'mobilelistitembutton_19': 'ServiceReview_mobilelistitembutton_19',
-        'mobilelistitem_20': 'ServiceReview_mobilelistitem_20',
-        'mobilelistitembutton_21': 'ServiceReview_mobilelistitembutton_21',
-        'mobilelistitem_22': 'ServiceReview_mobilelistitem_22',
-        'mobilelistitembutton_23': 'ServiceReview_mobilelistitembutton_23'
+        'mobilelist_53': 'ServiceReview_mobilelist_53',
+        'mobilelistitem_54': 'ServiceReview_mobilelistitem_54',
+        'mobilelistitembutton_55': 'ServiceReview_mobilelistitembutton_55',
+        'mobiletextarea_60': 'ServiceReview_mobiletextarea_60'
     };
 
     if ("n2id" in window && window.n2id !== undefined) {
@@ -73,6 +72,42 @@ ServiceReview_js = function(runBeforeShow) { /* Object & array with components "
      */
     var datasources = [];
 
+    Reviewrestservice1 = new Appery.DataSource(RESTServiceReview, {
+        'onComplete': function(jqXHR, textStatus) {
+
+            $t.refreshScreenFormElements("ServiceReview");
+        },
+        'onSuccess': function(data) {},
+        'onError': function(jqXHR, textStatus, errorThrown) {},
+        'responseMapping': [{
+            'PATH': ['records'],
+            'ID': 'mobilelistitem_54',
+            'SET': [{
+                'PATH': ['formatted'],
+                'ID': 'mobiletextarea_60',
+                'ATTR': 'value'
+            }]
+        }],
+        'requestMapping': [{
+            'PATH': ['server'],
+            'TYPE': 'STRING',
+            'ID': '___local_storage___',
+            'ATTR': 'Instance_url'
+        }, {
+            'PATH': ['token'],
+            'TYPE': 'STRING',
+            'ID': '___local_storage___',
+            'ATTR': 'access_token'
+        }, {
+            'PATH': ['product_code'],
+            'TYPE': 'STRING',
+            'ID': '___local_storage___',
+            'ATTR': 'productcode'
+        }]
+    });
+
+    datasources.push(Reviewrestservice1);
+
     /*
      * Events and handlers
      */
@@ -88,6 +123,13 @@ ServiceReview_js = function(runBeforeShow) { /* Object & array with components "
     // On Load
     screen_FEFD_onLoad = ServiceReview_onLoad = function() {
         screen_FEFD_elementsExtraJS();
+        setText('ServiceReview_mobilelabel_ProductName', localStorage.getItem('productname'));
+        try {
+            Reviewrestservice1.execute({})
+        } catch (ex) {
+            console.log(ex.name + '  ' + ex.message);
+            hideSpinner();
+        };
 
         // TODO fire device events only if necessary (with JS logic)
         ServiceReview_deviceEvents();
@@ -116,23 +158,19 @@ ServiceReview_js = function(runBeforeShow) { /* Object & array with components "
     screen_FEFD_elementsExtraJS = ServiceReview_elementsExtraJS = function() {
         // screen (ServiceReview) extra code
 
-        /* mobilelist_17 */
+        /* mobilelist_53 */
 
-        listView = $("#ServiceReview_mobilelist_17");
+        listView = $("#ServiceReview_mobilelist_53");
         theme = listView.attr("data-theme");
         if (typeof theme !== 'undefined') {
             var themeClass = "ui-btn-up-" + theme;
-            listItem = $("#ServiceReview_mobilelist_17 .ui-li-static");
+            listItem = $("#ServiceReview_mobilelist_53 .ui-li-static");
             $.each(listItem, function(index, value) {
                 $(this).addClass(themeClass);
             });
         }
 
-        /* mobilelistitem_18 */
-
-        /* mobilelistitem_20 */
-
-        /* mobilelistitem_22 */
+        /* mobilelistitem_54 */
 
     }
 
@@ -143,6 +181,18 @@ ServiceReview_js = function(runBeforeShow) { /* Object & array with components "
             click: function(event) {
                 event.stopPropagation();
             }
+        });
+
+        $('#ServiceReview_mobileheader [name="mobilebutton_29"]').die().live({
+            click: function() {
+                if (!$(this).attr('disabled')) {
+                    Appery.navigateTo('startScreen', {
+                        transition: 'slide',
+                        reverse: false
+                    });
+
+                }
+            },
         });
 
     }

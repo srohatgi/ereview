@@ -11,6 +11,7 @@
         <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
         />
         <link href="files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="files/resources/lib/theme/flat-ui/flat-ui.css" rel="stylesheet" />
         <link href="files/resources/lib/jquerymobile/1.3.2/jquery.mobile.structure-1.3.2.css"
         rel="stylesheet" />
         <script type="text/javascript" src="files/resources/lib/store/json2.js">
@@ -58,8 +59,6 @@
         />
         <script type="text/javascript" src="files/views/assets/js/Salesforce_utils.js">
         </script>
-        <script type="text/javascript" src="files/views/assets/js/CustomURLAjax.js">
-        </script>
         <script type="text/javascript" src="files/views/assets/js/CustomAjaxSFLogin.js">
         </script>
         <script type="text/javascript" src="files/views/assets/js/services/service.js">
@@ -79,55 +78,59 @@
         <div data-role="page" style="min-height:480px;" dsid="ServiceReview" id="ServiceReview"
         class="type-interior" data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
             <!-- mobileheader -->
-            <div data-role="header" data-position="fixed" data-theme="e" name="mobileheader"
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader"
             id="ServiceReview_mobileheader" class=' ServiceReview_mobileheader '>
                 <h1 dsid="mobileheader">
                     Reviews
                 </h1>
+                <!-- mobilebutton_29 -->
+                <a data-role="button" name="mobilebutton_29" dsid="mobilebutton_29" class='ui-btn-left   ServiceReview_mobilebutton_29'
+                id="ServiceReview_mobilebutton_29" data-corners="true" data-icon="arrow-l" data-iconpos="left"
+                x-apple-data-detectors="false" data-inline='true' data-mini='true' data-theme="c"
+                tabindex="6">
+                Back
+                </a>
             </div>
             <!-- mobilecontainer -->
             <div data-role="content" id="ServiceReview_mobilecontainer" name="mobilecontainer"
-            class=" ServiceReview_mobilecontainer" dsid="mobilecontainer" data-theme="">
+            class=" ServiceReview_mobilecontainer" dsid="mobilecontainer" data-theme="e">
                 <link href="ServiceReview.css" rel="stylesheet" type="text/css" />
                 <script type="text/javascript" src="ServiceReview.js">
                 </script>
-                <!-- mobilelabel_1 -->
-                <div name="mobilelabel_1" id="ServiceReview_mobilelabel_1" dsid="mobilelabel_1"
-                data-role="appery_label" class=' ServiceReview_mobilelabel_1 '>
-                    service or product name
+                <!-- mobilelabel_63 -->
+                <div name="mobilelabel_63" id="ServiceReview_mobilelabel_63" dsid="mobilelabel_63"
+                data-role="appery_label" class=' ServiceReview_mobilelabel_63 '>
+                    Product:
+                </div>
+                <!-- mobilelabel_ProductName -->
+                <div name="mobilelabel_ProductName" id="ServiceReview_mobilelabel_ProductName" dsid="mobilelabel_ProductName"
+                data-role="appery_label" class=' ServiceReview_mobilelabel_ProductName '>
+                </div>
+                <!-- spacer_61 -->
+                <div id="ServiceReview_spacer_61" dsid="spacer_61" class='mobilespacer ServiceReview_spacer_61'>
                 </div>
                 <!-- mobilelabel_15 -->
                 <div name="mobilelabel_15" id="ServiceReview_mobilelabel_15" dsid="mobilelabel_15"
                 data-role="appery_label" class=' ServiceReview_mobilelabel_15 '>
-                    Average rating
+                    Average rating: ***
                 </div>
-                <!-- mobileimage_16 -->
-                <img class=" ServiceReview_mobileimage_16" src="files/views/assets/image/India_Maharashtra_locator_map.png"
-                id="ServiceReview_mobileimage_16" dsid="mobileimage_16" name="mobileimage_16" />
-                <!-- mobilelist_17 -->
-                <ul data-role="listview" id="ServiceReview_mobilelist_17" class=' ServiceReview_mobilelist_17 '
-                name="mobilelist_17" dsid="mobilelist_17" data-inset="true" data-theme="d" data-divider-theme="a"
-                data-count-theme="c" style="">
-                    <!-- mobilelistitem_18 -->
-                    <li class=' ServiceReview_mobilelistitem_18 '>
-                        <a id="ServiceReview_mobilelistitem_18" name="mobilelistitem_18" dsid="mobilelistitem_18"
-                        tabindex="3" class=' ServiceReview_mobilelistitem_18 '>
-                        <h3>review 1</h3>
-                        </a>
-                    </li>
-                    <!-- mobilelistitem_20 -->
-                    <li class=' ServiceReview_mobilelistitem_20 '>
-                        <a id="ServiceReview_mobilelistitem_20" name="mobilelistitem_20" dsid="mobilelistitem_20"
-                        tabindex="3" class=' ServiceReview_mobilelistitem_20 '>
-                        <h3>review 2</h3>
-                        </a>
-                    </li>
-                    <!-- mobilelistitem_22 -->
-                    <li class=' ServiceReview_mobilelistitem_22 '>
-                        <a id="ServiceReview_mobilelistitem_22" name="mobilelistitem_22" dsid="mobilelistitem_22"
-                        tabindex="3" class=' ServiceReview_mobilelistitem_22 '>
-                        <h3>review 3</h3>
-                        </a>
+                <!-- mobilelist_53 -->
+                <ul data-role="listview" id="ServiceReview_mobilelist_53" class=' ServiceReview_mobilelist_53 '
+                name="mobilelist_53" dsid="mobilelist_53" data-inset="true" data-theme="c" data-divider-theme="b"
+                data-count-theme="b" style="">
+                    <!-- mobilelistitem_54 -->
+                    <li id="ServiceReview_mobilelistitem_54" name="mobilelistitem_54" dsid="mobilelistitem_54"
+                    class=' ServiceReview_mobilelistitem_54 '>
+                        <div class="ui-li-static-container">
+                            <!-- mobiletextarea_60 -->
+                            <div data-role="fieldcontain" class="ServiceReview_mobiletextarea_60 ">
+                                <textarea name="mobiletextarea_60" id="ServiceReview_mobiletextarea_60" tabindex="11"
+                                dsid="mobiletextarea_60" data-theme="c" class=' ServiceReview_mobiletextarea_60 '>Text area
+</textarea>
+                            </div>
+                            <span class="ui-icon ui-icon-arrow-r ui-icon-shadow extra">
+                            </span>
+                        </div>
                     </li>
                 </ul>
             </div>

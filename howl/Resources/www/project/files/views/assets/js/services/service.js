@@ -254,6 +254,12 @@ var Salesforce_User_update_service = new Appery.RestService({
     'serviceSettings': Salesforce_settings
 });
 
+var RESTServiceReview = new Appery.RestService({
+    'url': 'http://54.193.5.43:3000/review',
+    'dataType': 'json',
+    'type': 'get',
+});
+
 var Salesforce_Account_create_service = new Appery.RestService({
     'url': 'https://appery.io/app/rest/tunnel',
     'dataType': 'json',
