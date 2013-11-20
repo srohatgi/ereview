@@ -8,25 +8,6 @@
 	padding: 15px 15px 15px 15px;
 	height: 100%;
 }
-/* mobilelabel_30 */
-.startScreen_mobilelabel_30 {
-	text-decoration: none; font-weight: normal; font-style: italic; text-align: center; font-family: Helvetica; font-size: 16px;
-	margin: 4px 0px 4px 4px;
-	word-wrap: break-word;
-}
-/* mobilebutton_31 */
-#startScreen_mobilebutton_31 {
-
-}
-.ui-btn.startScreen_mobilebutton_31 {
-	margin: 2px 5px 4px 5px;
-}
-/* mobilelabel_76 */
-.startScreen_mobilelabel_76 {
-	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
-	margin: 4px 0px 4px 0px;
-	word-wrap: break-word;
-}
 /* mobilesearchbar_74 */
 .startScreen_mobilesearchbar_74 {
 	margin: 4px 0px 4px 0px;
@@ -38,48 +19,24 @@
 	margin: 9px 7px 8px 7px;
 	z-index: 9999;
 }
-/* spacer_41 */
-.startScreen_spacer_41 {
-	width: 288px; height: 45px;
-	margin: 4px 0px 4px 0px;
-}
-/* mobilelist_63 */
-.ui-content .startScreen_mobilelist_63 {
+/* mobilelist_85 */
+.ui-content .startScreen_mobilelist_85 {
 	margin: 4px 0px 0px 0px;
 }
-/* mobilelistitem_64 */
-.ui-mobile-viewport ul[data-role="listview"] li.startScreen_mobilelistitem_64 {
-	padding: 0px 0px 4px 0px;
-	padding-right: 30px; /* consider extra icon */
-}
-.ui-mobile-viewport ul[data-role="listview"] li.startScreen_mobilelistitem_64 span.ui-icon.extra {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	margin-top: -9px;
-}
-.ui-mobile-viewport ul[data-role="listview"] li.startScreen_mobilelistitem_64[data-icon="false"] span.ui-icon.extra {
-	display: none;
-}
-.ui-mobile-viewport ul[data-role="listview"] li.startScreen_mobilelistitem_64[data-icon="false"] {
-	padding-right: 0px; /* consider nothing */
-}
-/* mobilelistitembutton_65 */
-.startScreen_mobilelistitembutton_65 {
+/* mobilelistitem_86 */
+/* mobilelistitembutton_87 */
+.startScreen_mobilelistitembutton_87 {
 
 }
-/* mobilelabel_70Business */
-.startScreen_mobilelabel_70Business {
-	text-decoration: none; font-weight: normal; font-style: italic; text-align: left; font-family: Helvetica; font-size: 16px;
-	margin: 4px 0px 4px 0px;
-	word-wrap: break-word;
-}
-/* mobilebutton_84 */
-#startScreen_mobilebutton_84 {
+/* mobilelistitem_88 */
+/* mobilelistitembutton_89 */
+.startScreen_mobilelistitembutton_89 {
 
 }
-.ui-btn.startScreen_mobilebutton_84 {
-	margin: 4px 5px 4px 5px;
+/* mobilelistitem_90 */
+/* mobilelistitembutton_91 */
+.startScreen_mobilelistitembutton_91 {
+
 }
 /* mobilefooter1 */
 .startScreen_mobilefooter1 {

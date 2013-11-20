@@ -27,25 +27,20 @@ Appery.AppPages = [{
     "name": "startScreen",
     "location": "startScreen.html"
 }, {
-    "name": "BusinessReview",
-    "location": "BusinessReview.html"
-}, {
     "name": "ServiceReview",
     "location": "ServiceReview.html"
 }];
 
 startScreen_js = function(runBeforeShow) { /* Object & array with components "name-to-id" mapping */
     var n2id_buf = {
-        'mobilelabel_30': 'startScreen_mobilelabel_30',
-        'mobilebutton_31': 'startScreen_mobilebutton_31',
-        'mobilelabel_76': 'startScreen_mobilelabel_76',
         'mobilesearchbar_74': 'startScreen_mobilesearchbar_74',
-        'spacer_41': 'startScreen_spacer_41',
-        'mobilelist_63': 'startScreen_mobilelist_63',
-        'mobilelistitem_64': 'startScreen_mobilelistitem_64',
-        'mobilelistitembutton_65': 'startScreen_mobilelistitembutton_65',
-        'mobilelabel_70Business': 'startScreen_mobilelabel_70Business',
-        'mobilebutton_84': 'startScreen_mobilebutton_84'
+        'mobilelist_85': 'startScreen_mobilelist_85',
+        'mobilelistitem_86': 'startScreen_mobilelistitem_86',
+        'mobilelistitembutton_87': 'startScreen_mobilelistitembutton_87',
+        'mobilelistitem_88': 'startScreen_mobilelistitem_88',
+        'mobilelistitembutton_89': 'startScreen_mobilelistitembutton_89',
+        'mobilelistitem_90': 'startScreen_mobilelistitem_90',
+        'mobilelistitembutton_91': 'startScreen_mobilelistitembutton_91'
     };
 
     if ("n2id" in window && window.n2id !== undefined) {
@@ -90,15 +85,7 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
             };
         },
         'onError': function(jqXHR, textStatus, errorThrown) {},
-        'responseMapping': [{
-            'PATH': ['$', 'records'],
-            'ID': 'mobilelistitem_64',
-            'SET': [{
-                'PATH': ['Name'],
-                'ID': 'mobilelabel_70Business',
-                'ATTR': '@'
-            }]
-        }],
+        'responseMapping': [],
         'requestMapping': [{
             'PATH': ['Authorization'],
             'TYPE': 'STRING',
@@ -119,7 +106,7 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
         }, {
             'PATH': ['appery-key'],
             'HEADER': true,
-            'ATTR': '1384839519705'
+            'ATTR': '1384909434335'
         }, {
             'PATH': ['appery-rest'],
             'HEADER': true,
@@ -172,19 +159,23 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
     screen_3671_elementsExtraJS = startScreen_elementsExtraJS = function() {
         // screen (startScreen) extra code
 
-        /* mobilelist_63 */
+        /* mobilelist_85 */
 
-        listView = $("#startScreen_mobilelist_63");
+        listView = $("#startScreen_mobilelist_85");
         theme = listView.attr("data-theme");
         if (typeof theme !== 'undefined') {
             var themeClass = "ui-btn-up-" + theme;
-            listItem = $("#startScreen_mobilelist_63 .ui-li-static");
+            listItem = $("#startScreen_mobilelist_85 .ui-li-static");
             $.each(listItem, function(index, value) {
                 $(this).addClass(themeClass);
             });
         }
 
-        /* mobilelistitem_64 */
+        /* mobilelistitem_86 */
+
+        /* mobilelistitem_88 */
+
+        /* mobilelistitem_90 */
 
     }
 
@@ -195,15 +186,6 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
             click: function(event) {
                 event.stopPropagation();
             }
-        });
-
-        $('#startScreen_mobilecontainer1 [name="mobilebutton_31"]').die().live({
-            click: function() {
-                if (!$(this).attr('disabled')) {
-                    salesforceLogin();
-
-                }
-            },
         });
 
         $('#startScreen_mobilecontainer1 [name="mobilesearchbar_74"]').die().live({
@@ -237,10 +219,10 @@ startScreen_js = function(runBeforeShow) { /* Object & array with components "na
             }
         });
 
-        $('#startScreen_mobilecontainer1 [name="mobilebutton_84"]').die().live({
+        $('#startScreen_mobilecontainer1 [name="mobilelist_85"]').die().live({
             click: function() {
                 if (!$(this).attr('disabled')) {
-                    Appery.navigateTo('BusinessReview', {
+                    Appery.navigateTo('ServiceReview', {
                         reverse: false
                     });
 

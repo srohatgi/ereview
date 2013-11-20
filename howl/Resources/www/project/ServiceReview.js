@@ -27,9 +27,6 @@ Appery.AppPages = [{
     "name": "startScreen",
     "location": "startScreen.html"
 }, {
-    "name": "BusinessReview",
-    "location": "BusinessReview.html"
-}, {
     "name": "ServiceReview",
     "location": "ServiceReview.html"
 }];
